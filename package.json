@@ -1,0 +1,23 @@
+{
+  "name": "exercicio-pageobjects",
+  "version": "1.0.0",
+  "description": "PageObjects",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "cypress run",
+    "report:merge": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/merged-report.json",
+    "report:generate": "marge mochawesome-report/merged-report.json -o mochawesome-report/html",
+    "test": "npm run cypress:run && npm run report:merge && npm run report:generate"
+  },
+  "author": "josimarifabri",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1",
+    "cypress-multi-reporters": "^1.6.4",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "start-server-and-test": "^2.0.4"
+  },
+  "keywords": []
+}
